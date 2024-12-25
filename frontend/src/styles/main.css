@@ -1,0 +1,719 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #2ecc71;
+  --background-color: #f8f9fa;
+  --text-color: #2c3e50;
+  --error-color: #e74c3c;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --header-height: 70px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Стили для форм */
+.form-container {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  transition: var(--transition);
+}
+
+.form-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-input {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e1e1e1;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: white;
+  color: #333;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #357abd;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  border: 2px solid #e1e1e1;
+}
+
+.btn-secondary:hover {
+  background-color: #e9ecef;
+}
+
+/* Стили для карточек */
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.card p {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для навигации */
+.nav-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: #357abd;
+}
+
+/* Стили для результатов тестов */
+.test-result {
+  border-left: 4px solid var(--secondary-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.test-result:hover {
+  transform: translateX(2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* Стили для хедера */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-height);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  color: #357abd;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.nav-button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.nav-button.primary:hover {
+  background-color: #357abd;
+  color: white;
+}
+
+.nav-button.logout {
+  color: var(--error-color);
+}
+
+.nav-button.logout:hover {
+  background-color: #ffebee;
+}
+
+/* Обновленные стили для основного контента */
+.app {
+  min-height: 100vh;
+  width: 100rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  margin-top: var(--header-height);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 2rem;
+  min-height: calc(100vh - var(--header-height));
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Стили для форм авторизации */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--header-height));
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: var(--header-height);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth-form {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  transition: var(--transition);
+}
+
+.auth-form:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.auth-form h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Стили для сообщений об ошибках */
+.error-message {
+  background-color: #fff3f3;
+  color: var(--error-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  border: 1px solid #ffe6e6;
+}
+
+/* Стили для сетки тестов */
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.tests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
+  margin-top: 2rem;
+}
+
+.tests-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Стили для страницы прохождения теста */
+.test-taking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.question-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.question-progress {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.option-button {
+  padding: 1rem;
+  border: 2px solid #e1e1e1;
+  border-radius: var(--border-radius);
+  background: white;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  color: var(--text-color);
+}
+
+.option-button:hover {
+  border-color: var(--primary-color);
+  background-color: #f8f9fa;
+  color: var(--text-color);
+}
+
+.option-button.selected {
+  border-color: var(--primary-color);
+  background-color: #e3f2fd;
+  color: var(--text-color);
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Стили ��ля создания теста */
+.create-test-container {
+  width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.question-form-card {
+  background: #f8f9fa;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #e1e1e1;
+}
+
+.option-input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background: white;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  border: 2px solid #e1e1e1;
+}
+
+.create-test-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-add-question {
+  align-self: flex-start;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-add-question:hover {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-create-test {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .auth-form, .test-result {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Стили для загрузки */
+.loading-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 1400px) {
+  .tests-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tests-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .tests-header {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .tests-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tests-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+  
+  .tests-header {
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .card {
+    min-height: 180px;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Дополнительные улучшения */
+.test-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.test-info h2 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.test-info p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+textarea.form-input {
+  color: #333;
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Стили для профиля */
+.profile-container {
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--background-color);
+  padding: 2rem;
+  margin-top: var(--header-height);
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.profile-info {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  height: fit-content;
+}
+
+.profile-info h2 {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+  font-size: 1.8rem;
+}
+
+.user-email {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.profile-results {
+  background: white;
+  padding: 2rem;
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.profile-results h2 {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+  font-size: 1.8rem;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.test-result {
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: var(--transition);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.test-result:hover {
+  transform: translateX(5px);
+  box-shadow: var(--box-shadow);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.test-id {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.result-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 900px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .profile-info .nav-link {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 1rem;
+  }
+  
+  .profile-info,
+  .profile-results {
+    padding: 1.5rem;
+  }
+  
+  .test-result {
+    padding: 1rem;
+  }
+  
+  .result-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Стили для кноп��к в хедере тестов */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+/* Обновленные стили для хедера тестов */
+.tests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
+  margin-top: 2rem;
+} 
